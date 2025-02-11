@@ -178,3 +178,22 @@ A Higher-Order Function (HOF) is a function that either takes another function a
 example:
 map, filter, and reduce are classic examples of Higher-Order Functions (HOFs) in JavaScript because they take a callback function as a parameter.
 
+Q.What is the difference between for-in and for-of?
+1. for...in():
+Definition: The for...in loop goes through the property names (keys) of an object, including any inherited ones.
+It's mainly used for objects, though it can be applied to arrays (which isn't recommended).
+
+/*
+const car = { make: 'Toyota', model: 'Corolla', year: 2021 };
+for (const key in car) {
+  console.log(`${key}: ${car[key]}`);
+}
+// Output:
+// make: Toyota
+// model: Corolla
+// year: 2021
+
+*/
+
+2. for...of()
+Definition: The for...of loop goes through the values of iterable objects, such as arrays, strings, maps, and sets.
