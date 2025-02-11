@@ -1,7 +1,30 @@
 
 Q.Give me five strings methods?
-1.split():In JavaScript, the split() method is used to divide a string into an array of substrings based on a specified separator. It doesn't modify the original string but returns a new array.
+1.split():
+1.The split() method splits a string into an array of substrings.
+2.The split() method returns the new array.
+3.The split() method does not change the original string.
+syntax: string.split(separator, limit)
+return type: array
+/*
+Example:
+let text = "How are you doing today?";
+console.log(text.split(" ",3)) //["How","are","you"]
+*/
+
 2.concat():
+1.The concat() method joins two or more strings.
+2.The concat() method does not change the existing strings.
+3.The concat() method returns a new string.
+syntax:string.concat(string1, string2, ..., stringX)
+
+/*
+Example:
+let text1 = "Hello";
+let text2 = "world!";
+console.log(text1.concat(" ", text2));
+*/
+0
 3.trim()
 4.toLowerCase()
 5.toUpperCase()
@@ -9,6 +32,16 @@ Q.Give me five strings methods?
 7.trimStart()
 8.trimEnd()
 9.slice()
+10.startWith()
+11.endWith()
+
+Q.Give me five array methods?
+1.at()
+1.The at() method returns an indexed element from an array.
+2.The at() method returns the same as [].
+3.The at() method is supported in all modern browsers since March 2022:
+syntax:
+Q.Give me five object methods?
 
 Q.What is Promise?
 ans.
@@ -90,7 +123,7 @@ Arrow Function: Cannot be used as constructors; attempting to use new with an ar
 
 Q.What is the difference between null and undefine?
 ans.
-1.Explanation
+1).Explanation
 null: Explicitly set by developers to indicate the intentional absence of any object or value.
 undefined: Automatically assigned by JavaScript when:
 A variable is declared but not initialized.
@@ -114,4 +147,28 @@ usecase:
 4.Copying and Merging Objects
 
 Note:While the Rest operator gathers values into an array, the Spread operator spreads elements out from an array or object.
+
+Q.What is Event loop?
+ans.
+Event Loop in JavaScript
+The Event Loop is a mechanism in JavaScript that manages the execution of code, handles asynchronous tasks, and ensures smooth, non-blocking operations.
+
+Why Do We Need the Event Loop?
+JavaScript is single-threaded, meaning it can only execute one task at a time. If it had no way to handle asynchronous operations, long-running tasks (like fetching data or waiting for user input) would block the execution of other code. The Event Loop solves this by enabling asynchronous, non-blocking execution.
+
+How the Event Loop Works
+
+Call Stack:
+Contains functions currently being executed. Functions are pushed when called and popped when completed.
+
+Web APIs (Browser APIs):
+Handles asynchronous operations like setTimeout, HTTP requests (via fetch), and DOM events.
+
+Task Queues:
+Microtask Queue: Higher priority queue for tasks like promises and mutation observers.
+Macrotask Queue: Lower priority queue for tasks like setTimeout, setInterval, and I/O operations.
+
+Event Loop:
+Continuously checks if the call stack is empty.
+If empty, it pushes tasks from the Microtask Queue first, then from the Macrotask Queue to the call stack for execution.
 
