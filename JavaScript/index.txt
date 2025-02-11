@@ -1,0 +1,117 @@
+
+Q.Give me five strings methods?
+1.split():In JavaScript, the split() method is used to divide a string into an array of substrings based on a specified separator. It doesn't modify the original string but returns a new array.
+2.concat():
+3.trim()
+4.toLowerCase()
+5.toUpperCase()
+6..length
+7.trimStart()
+8.trimEnd()
+9.slice()
+
+Q.What is Promise?
+ans.
+Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It acts as a bridge between the executing code and the final result, allowing you to handle success, failure, and chaining operations using .then(), .catch(), and .finally(). Promises help in writing cleaner and more maintainable asynchronous code compared to traditional callback functions.
+
+Promise has three state:
+a.Pending
+b.Fullfilled
+c.Rejected
+
+Q.What is hoisting?
+ans.
+ Hoisting is a default behavior in JavaScript where variable and function declarations are moved to the top of their respective scopes during the compilation phase, before the code is executed. This means you can use functions and variables before they are declared in the code.
+
+Key Points:
+1.Function declarations are fully hoisted, allowing them to be called before they appear in the code.
+2.Variables declared with var are hoisted but initialized as undefined.
+3.Variables declared with let and const are hoisted but are in a temporal dead zone until they are assigned a value.
+
+Q.what is let ,var and const?
+ans.
+1. var (Function-scoped)
+Declares a variable globally or within the function where it is defined.
+Hoisted: Accessible before declaration but initialized with undefined.
+
+2. let (Block-scoped)
+Declares variables limited to the block, statement, or expression where they are defined.
+Not accessible before declaration due to Temporal Dead Zone (TDZ).
+
+3. const (Block-scoped, Immutable Binding)
+Declares read-only variables.
+Must be initialized during declaration.
+The value cannot be reassigned, but if it’s an object or array, the contents can be mutated.
+
+Q.What is local scope?
+Local scope in  refers to variables that are accessible only within a specific function, block, or module. It is not accessible outside that scope.
+
+Q.What is event bubbling and What is event capturing?
+ans.
+Event Bubbling:
+Event bubbling is a mechanism in the DOM where an event starts from the target element and propagates (or "bubbles") up through its ancestors in the hierarchy until it reaches the root element (document).
+
+Event Propagation Phases:
+1.Capturing phase: Events travel from the root down to the target element.
+2.Target phase: The event fires on the target element.
+3.Bubbling phase: The event bubbles up from the target element to the root.
+
+Prevent Event Bubbling:
+event.stopPropagation();
+
+Event capturing:
+Event capturing (also known as event trickling) is a mechanism where events propagate from the root element down to the target element before the target's event handler is executed.
+
+Propagation Phases:
+1.Capturing phase: Events travel from the document's root (window or document) down through parent elements until they reach the target element.
+2.Target phase: The event fires on the target element.
+3.Bubbling phase: The event propagates back up from the target element to the root.
+
+
+Q.What is the difference between arrow function and regular function?
+Ans:
+
+a).
+Regular Function:
+Regular functions have access to the arguments object that contains all passed arguments.
+
+Arrow Function:
+Arrow functions do not have their own arguments object. You can use rest parameters (...args) instead.
+
+b).
+Regular Function: Works well when used as object methods.
+Arrow Function: Should not be used as methods since they don’t bind their own this.
+
+c).
+Regular Function: Can be used as constructors (with the new keyword) to create object instances.
+Arrow Function: Cannot be used as constructors; attempting to use new with an arrow function throws an error.
+
+
+
+Q.What is the difference between null and undefine?
+ans.
+1.Explanation
+null: Explicitly set by developers to indicate the intentional absence of any object or value.
+undefined: Automatically assigned by JavaScript when:
+A variable is declared but not initialized.
+A function does not return a value.
+An object property is missing.
+
+
+Q.What is rest operator and spread oprartor?
+rest operator:
+The Rest parameter  allows a function to accept an indefinite number of arguments, which are collected into an array. It is defined using three dots (...) followed by a parameter name.
+usecase.
+1.function parameter
+2.destructing
+
+spread operator:
+The Spread operator  is used to unpack (expand) elements of an iterable (like an array, string, or object properties) where zero or more elements are expected.
+usecase:
+1.Copy array
+2.Merge array
+3.Expanding Elements in Function Calls
+4.Copying and Merging Objects
+
+Note:While the Rest operator gathers values into an array, the Spread operator spreads elements out from an array or object.
+
