@@ -31,8 +31,13 @@ console.log(text1.concat(" ", text2));
 6..length
 7.trimStart()
 8.trimEnd()
-9.slice()
+9.slice():
+a).The slice() method returns selected elements in an array, as a new array.
+b).The slice() method selects from a given start, up to a (not inclusive) given end.
+c).The slice() method does not change the original array.
+
 10.startWith()
+
 11.endWith()
 
 Q.Give me five array methods?
@@ -139,7 +144,8 @@ usecase.
 2.destructing
 
 spread operator:
-The Spread operator  is used to unpack (expand) elements of an iterable (like an array, string, or object properties) where zero or more elements are expected.
+The spread operator (...) in JavaScript is a way to "spread" or expand elements of an array, object, or other iterable into individual elements. It makes it easy to copy, combine, or pass data without mutating the original structure.
+
 usecase:
 1.Copy array
 2.Merge array
@@ -197,3 +203,11 @@ for (const key in car) {
 
 2. for...of()
 Definition: The for...of loop goes through the values of iterable objects, such as arrays, strings, maps, and sets.
+
+/*
+const fruits = ["Apple", "Banana", "Cherry"];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+*/
