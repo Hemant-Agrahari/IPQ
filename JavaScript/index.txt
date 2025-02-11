@@ -172,3 +172,9 @@ Event Loop:
 Continuously checks if the call stack is empty.
 If empty, it pushes tasks from the Microtask Queue first, then from the Macrotask Queue to the call stack for execution.
 
+Q.What is Higher order function?
+ans:
+A Higher-Order Function (HOF) is a function that either takes another function as a parameter, returns a function, or both.
+example:
+map, filter, and reduce are classic examples of Higher-Order Functions (HOFs) in JavaScript because they take a callback function as a parameter.
+
