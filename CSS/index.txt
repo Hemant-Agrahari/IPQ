@@ -1,0 +1,11 @@
+Q.What is the difference getElementsById and querySelector?
+Ans.
+a).Performance
+
+1.getElementById() is faster because it directly accesses elements by their unique ID.
+2.querySelector() is slightly slower since it needs to parse the selector.
+
+b). Flexibility
+getElementById() is limited to selecting only by ID, which must be unique in the document.
+querySelector() allows selecting elements by class, tag, ID, or nested selectors, making it more flexible.
+

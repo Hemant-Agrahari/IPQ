@@ -1,0 +1,213 @@
+
+Q.Give me five strings methods?
+1.split():
+1.The split() method splits a string into an array of substrings.
+2.The split() method returns the new array.
+3.The split() method does not change the original string.
+syntax: string.split(separator, limit)
+return type: array
+/*
+Example:
+let text = "How are you doing today?";
+console.log(text.split(" ",3)) //["How","are","you"]
+*/
+
+2.concat():
+1.The concat() method joins two or more strings.
+2.The concat() method does not change the existing strings.
+3.The concat() method returns a new string.
+syntax:string.concat(string1, string2, ..., stringX)
+
+/*
+Example:
+let text1 = "Hello";
+let text2 = "world!";
+console.log(text1.concat(" ", text2));
+*/
+0
+3.trim()
+4.toLowerCase()
+5.toUpperCase()
+6..length
+7.trimStart()
+8.trimEnd()
+9.slice():
+a).The slice() method returns selected elements in an array, as a new array.
+b).The slice() method selects from a given start, up to a (not inclusive) given end.
+c).The slice() method does not change the original array.
+
+10.startWith()
+
+11.endWith()
+
+Q.Give me five array methods?
+1.at()
+1.The at() method returns an indexed element from an array.
+2.The at() method returns the same as [].
+3.The at() method is supported in all modern browsers since March 2022:
+syntax:
+Q.Give me five object methods?
+
+Q.What is Promise?
+ans.
+Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It acts as a bridge between the executing code and the final result, allowing you to handle success, failure, and chaining operations using .then(), .catch(), and .finally(). Promises help in writing cleaner and more maintainable asynchronous code compared to traditional callback functions.
+
+Promise has three state:
+a.Pending
+b.Fullfilled
+c.Rejected
+
+Q.What is hoisting?
+ans.
+ Hoisting is a default behavior in JavaScript where variable and function declarations are moved to the top of their respective scopes during the compilation phase, before the code is executed. This means you can use functions and variables before they are declared in the code.
+
+Key Points:
+1.Function declarations are fully hoisted, allowing them to be called before they appear in the code.
+2.Variables declared with var are hoisted but initialized as undefined.
+3.Variables declared with let and const are hoisted but are in a temporal dead zone until they are assigned a value.
+
+Q.what is let ,var and const?
+ans.
+1. var (Function-scoped)
+Declares a variable globally or within the function where it is defined.
+Hoisted: Accessible before declaration but initialized with undefined.
+
+2. let (Block-scoped)
+Declares variables limited to the block, statement, or expression where they are defined.
+Not accessible before declaration due to Temporal Dead Zone (TDZ).
+
+3. const (Block-scoped, Immutable Binding)
+Declares read-only variables.
+Must be initialized during declaration.
+The value cannot be reassigned, but if it’s an object or array, the contents can be mutated.
+
+Q.What is local scope?
+Local scope in  refers to variables that are accessible only within a specific function, block, or module. It is not accessible outside that scope.
+
+Q.What is event bubbling and What is event capturing?
+ans.
+Event Bubbling:
+Event bubbling is a mechanism in the DOM where an event starts from the target element and propagates (or "bubbles") up through its ancestors in the hierarchy until it reaches the root element (document).
+
+Event Propagation Phases:
+1.Capturing phase: Events travel from the root down to the target element.
+2.Target phase: The event fires on the target element.
+3.Bubbling phase: The event bubbles up from the target element to the root.
+
+Prevent Event Bubbling:
+event.stopPropagation();
+
+Event capturing:
+Event capturing (also known as event trickling) is a mechanism where events propagate from the root element down to the target element before the target's event handler is executed.
+
+Propagation Phases:
+1.Capturing phase: Events travel from the document's root (window or document) down through parent elements until they reach the target element.
+2.Target phase: The event fires on the target element.
+3.Bubbling phase: The event propagates back up from the target element to the root.
+
+
+Q.What is the difference between arrow function and regular function?
+Ans:
+
+a).
+Regular Function:
+Regular functions have access to the arguments object that contains all passed arguments.
+
+Arrow Function:
+Arrow functions do not have their own arguments object. You can use rest parameters (...args) instead.
+
+b).
+Regular Function: Works well when used as object methods.
+Arrow Function: Should not be used as methods since they don’t bind their own this.
+
+c).
+Regular Function: Can be used as constructors (with the new keyword) to create object instances.
+Arrow Function: Cannot be used as constructors; attempting to use new with an arrow function throws an error.
+
+
+
+Q.What is the difference between null and undefine?
+ans.
+1).Explanation
+null: Explicitly set by developers to indicate the intentional absence of any object or value.
+undefined: Automatically assigned by JavaScript when:
+A variable is declared but not initialized.
+A function does not return a value.
+An object property is missing.
+
+
+Q.What is rest operator and spread oprartor?
+rest operator:
+The Rest parameter  allows a function to accept an indefinite number of arguments, which are collected into an array. It is defined using three dots (...) followed by a parameter name.
+usecase.
+1.function parameter
+2.destructing
+
+spread operator:
+The spread operator (...) in JavaScript is a way to "spread" or expand elements of an array, object, or other iterable into individual elements. It makes it easy to copy, combine, or pass data without mutating the original structure.
+
+usecase:
+1.Copy array
+2.Merge array
+3.Expanding Elements in Function Calls
+4.Copying and Merging Objects
+
+Note:While the Rest operator gathers values into an array, the Spread operator spreads elements out from an array or object.
+
+Q.What is Event loop?
+ans.
+Event Loop in JavaScript
+The Event Loop is a mechanism in JavaScript that manages the execution of code, handles asynchronous tasks, and ensures smooth, non-blocking operations.
+
+Why Do We Need the Event Loop?
+JavaScript is single-threaded, meaning it can only execute one task at a time. If it had no way to handle asynchronous operations, long-running tasks (like fetching data or waiting for user input) would block the execution of other code. The Event Loop solves this by enabling asynchronous, non-blocking execution.
+
+How the Event Loop Works
+
+Call Stack:
+Contains functions currently being executed. Functions are pushed when called and popped when completed.
+
+Web APIs (Browser APIs):
+Handles asynchronous operations like setTimeout, HTTP requests (via fetch), and DOM events.
+
+Task Queues:
+Microtask Queue: Higher priority queue for tasks like promises and mutation observers.
+Macrotask Queue: Lower priority queue for tasks like setTimeout, setInterval, and I/O operations.
+
+Event Loop:
+Continuously checks if the call stack is empty.
+If empty, it pushes tasks from the Microtask Queue first, then from the Macrotask Queue to the call stack for execution.
+
+Q.What is Higher order function?
+ans:
+A Higher-Order Function (HOF) is a function that either takes another function as a parameter, returns a function, or both.
+example:
+map, filter, and reduce are classic examples of Higher-Order Functions (HOFs) in JavaScript because they take a callback function as a parameter.
+
+Q.What is the difference between for-in and for-of?
+1. for...in():
+Definition: The for...in loop goes through the property names (keys) of an object, including any inherited ones.
+It's mainly used for objects, though it can be applied to arrays (which isn't recommended).
+
+/*
+const car = { make: 'Toyota', model: 'Corolla', year: 2021 };
+for (const key in car) {
+  console.log(`${key}: ${car[key]}`);
+}
+// Output:
+// make: Toyota
+// model: Corolla
+// year: 2021
+
+*/
+
+2. for...of()
+Definition: The for...of loop goes through the values of iterable objects, such as arrays, strings, maps, and sets.
+
+/*
+const fruits = ["Apple", "Banana", "Cherry"];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+*/

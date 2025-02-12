@@ -1,0 +1,83 @@
+Q.What is Pure Component?
+A Pure Component is a React component that only re-renders when its props or state change, based on a shallow comparison. It helps improve performance by preventing unnecessary re-renders.
+
+How to Create a Pure Component:
+Class Component:
+Use React.PureComponent instead of React.Component.
+Functional Component:
+Use React.memo() to make it behave like a pure component.
+
+
+Q.What is Controlled Component?
+ans:
+A Controlled Component is a component  that is controlled by React state and props rather than managing its own state or relying on the browser's default behavior.
+This keeps React as the single source of truth for the component's data and UI behavior.
+example:
+Form
+
+Q.What is Context API?
+ans.
+The Context API is a built-in feature that allows components to share data (state, props, functions, etc.) across the entire component tree without having to pass props manually at every level.It provides a way to manage global state in a React application, acting as a lightweight alternative to state management libraries like Redux.
+
+When to Use Context API:
+When you need to share data across multiple components without prop drilling.
+For features like:
+1.User authentication
+2.Theme toggling
+3.Localization
+4.Application settings
+
+
+Q.What is the defference between Redux and Context API?
+When to Use Context API
+1.Small to medium applications.
+2.When you only need to manage simple, localized global state (like theme toggling or user authentication).
+3.If performance optimization isn't critical.
+
+When to Use Redux
+1.Large-scale applications with complex state management requirements.
+2.When state is frequently updated by multiple components.
+3.Need for predictable and testable state management.
+4.Want advanced debugging and middleware support.
+
+Q.what is memo and usememo?
+ans:
+memo()
+Definition:
+React.memo() is a higher-order component (HOC) that wraps a functional component and prevents unnecessary re-renders by performing a shallow comparison of props.
+Key Use Case:
+It improves performance by skipping the re-render when props remain the same.
+
+usememo()
+Definition:
+useMemo() is a React hook that memoizes the result of a computation to avoid unnecessary recalculations during rendering.
+
+Key Use Case:
+Optimize expensive computations inside components.
+
+How it Works:
+useMemo() memoizes the expensiveCalculation result and recomputes it only when count changes.
+
+
+Q. What is Document Object Modal?
+Ans.
+The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree-like hierarchy of nodes, where each node corresponds to elements, attributes, or text within the document. The DOM allows developers to access, manipulate, and dynamically update the content, structure, and style of web pages using languages like JavaScript.
+
+Q.What is Shadow DOM?
+Shadow DOM is a part of Web Components that allows developers to encapsulate HTML, CSS, and JavaScript within a specific component. This encapsulation ensures that styles and scripts defined inside the Shadow DOM do not affect the rest of the page and vice versa.
+
+Q.What is useForwardRef?
+forwardRef in React is a function that allows a parent component to pass a ref to a child component. By default, functional components do not forward refs, but forwardRef enables this behavior.
+This is useful when the parent component needs to directly access a child component's DOM element or instance.
+
+Q.What is Virtual Dom?
+Ans.
+VDOM (Virtual DOM) is an in-memory representation of the actual DOM (Document Object Model)  to optimize rendering and improve performance.
+When a state or prop change occurs in React, a new Virtual DOM tree is created. React then compares this updated Virtual DOM with the previous version using an efficient diffing algorithm. After identifying the differences, only the minimal and necessary changes are applied to the actual DOM. This process, known as reconciliation, prevents full re-renders and optimizes the application's performance.
+
+Q.What is the difference between usecallback hook and usememo hook in reactjs?
+usecallback hook:
+useCallback is a React hook that returns a memoized function, meaning it will only be recreated if its dependencies change. It helps optimize performance by preventing unnecessary function re-creation, especially when passing functions as props to child components.
+
+useMemo hook:
+useMemo is a React hook that memoizes the result of a computation, ensuring it only recalculates when its dependencies change. It is useful for optimizing expensive calculations that do not need to be recomputed on every render.
